@@ -1,0 +1,25 @@
+<body>
+  <div class="container w-50 mt-5 p-3">
+    <h3 class="text-center">add user</h3>
+    <form  (ngSubmit)="adduser()"  action="" >
+        
+        <div class="p-2">
+            <input name="username" [(ngModel)]="s.Name" class="form-control" type="text" placeholder="User name"  >
+        </div>
+        <div class="p-2">
+            <input name="password" [(ngModel)]="s.password" class="form-control" type="text" placeholder="User Password" >
+        </div>
+        <form >
+            <label for="admin"><input [(ngModel)]="s.usertype" type="radio" name="Id" value="1"  >Admin <label for="user"> <input [(ngModel)]="!s.usertype" type="radio" name="Id" value="2">User</label><br>
+        </label><br>
+        </form>
+        <!-- <div class="p-2">
+            <input name="usertype" [(ngModel)]="s.usertype"  class="form-control" type="text" placeholder="User Type" >
+        </div> -->
+
+        <div class="p-2 text-center">
+            <button type="submit"  class="btn btn-outline-dark">add </button>
+        </div>
+    </form>
+</div>
+</body>

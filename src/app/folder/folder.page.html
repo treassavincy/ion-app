@@ -1,0 +1,23 @@
+<body>
+  <div class="container w-50 mt-5 p-3">
+    <h3 class="text-center">Update user</h3>
+    <form  (ngSubmit)="edituser(b.Id)"  action="" >
+      
+        <div class="p-2">
+            <input name="username" [(ngModel)]="b.Name" class="form-control" type="text" placeholder="User name"  >
+        </div>
+        <div class="p-2">
+            <input name="password" [(ngModel)]="b.password" class="form-control" type="text" placeholder="User Password" >
+        </div>
+        <form >
+            <label for="admin"><input [(ngModel)]="b.usertype" type="radio" name="Id" value="1"  >Admin 
+                <label for="user"> <input [(ngModel)]="!b.usertype" type="radio" name="Id" value="2">User</label><br>
+        </label><br>
+        </form>
+
+        <div class="p-2 text-center">
+            <button type="submit"  class="btn btn-outline-dark">Update </button>
+        </div>
+    </form>
+</div>
+</body>

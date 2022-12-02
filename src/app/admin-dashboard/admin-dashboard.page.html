@@ -1,0 +1,33 @@
+<body>
+    <nav class="navbar  mb-5" style="background-color: rgb(132, 132, 167);">
+          <span class="navbar-brand mb-0 h1 p-3 text-white">Welcome {{current}}!!!    
+            <button class='btn btn-light me-auto' style="margin-left:900px ;" (click)="add()">Create New User</button>
+            <button class='btn btn-light me-auto' style="margin-left:40px;" (click)="out()">Logout</button>
+</span>
+      </nav>
+
+      <table class="table table-light  w-50 mx-auto  ">
+          <thead>
+            <tr>
+              <td class="fw-bold"> Username</td>
+              <td class="fw-bold">Password</td>
+              <td class="fw-bold">Usertype</td>
+                  </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let i of UserList">
+                  
+                            <td>{{i.Name}}</td>
+                            <td>{{i.password}}</td>
+                            <td *ngIf="i.usertype==1">Admin</td> 
+                                <td *ngIf="i.usertype==2">User</td> 
+
+                                  <span></span>
+                            <span></span><button (click)="edit(i)"  style="border:none;background-color: rgb(20, 20, 94); color:white;">Update</button>&nbsp;
+                            <button type="button" (click)="del(i.Id)"  style="border: none;background-color: rgb(139, 22, 22);color:white;">Delete</button>
+                                                                      
+            </tr>  
+                </tbody>
+              
+      </table>
+</body>

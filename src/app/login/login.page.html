@@ -1,0 +1,19 @@
+<body style="color: black;">
+
+  <div class="col-24 container w-50 mt-5 bg-light rounded p-5">
+    <div class="d-grid">
+      <h4 class="pt-4 pb-4 fw-bold mx-auto" style=color:rgb(67,95,153);>Log In </h4>
+            <form (ngSubmit)="login()" >
+             <!-- <div *ngIf="this.loginForm.get('userid')?.errors&&this.loginForm.get('userid')?.touched"><p>Invalid id</p></div> -->
+  
+             <input name="usern" type="text"  placeholder="Enter Username" [(ngModel)]="usern" class="mb-4 p-2 col-md-12 col-lg-12 col-sm-12">
+                      <!-- <div *ngIf="this.loginForm.get('usern')?.errors&&this.loginForm.get('usern')?.touched"><p>Invalid Username</p></div> -->
+                      <input  name="pswd"  type="password" placeholder="Enter Password" [(ngModel)]="pswd" class="mb-4 p-2 ">
+                      <!-- <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched"><p>Invalid Password</p></div> -->
+                      <button class="mb-4 mx-auto"   type="submit">LOG IN</button>
+            </form>
+               </div>
+             
+              </div>
+</body>
+
