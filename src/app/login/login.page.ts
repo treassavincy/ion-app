@@ -33,6 +33,10 @@ this.getuser()
       this.UserList = data;
       
     })
+    
+
+
+
   }
   login(){
     
